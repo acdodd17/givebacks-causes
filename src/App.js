@@ -29,14 +29,14 @@ function App() {
       <header className="App-header">
         <img src={logo} alt="Memberhub logo" />
         <h1 className='title'>Givebacks</h1>
-        <p id='tagline'><em>Empowering communities through everyday purchases</em></p>
+        <p id='tagline'>Empowering communities through everyday purchases</p>
       </header>
       <main>
         <div className='filter-search'>
 
         </div>
         <div className='causes'>
-          {isLoaded ? causes.map((cause, index) => <Cause cause={cause} key={index}/> ) : ''}
+          {isLoaded === true && causes ? causes.map((cause, index) => <Cause cause={cause} key={index}/> ) : ''}
         </div>
       </main>
     </div>
