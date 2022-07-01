@@ -27,9 +27,19 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+  /* background-color: rgba(211,211,211,0.5); */
+}
+
+.cause-count {
+  margin-top: 1rem;
+}
+
+.count em {
+  font-size: .75rem;
 }
 
 .cause {
@@ -39,7 +49,8 @@
   height: 250px;
   border: 1px solid lightgrey;
   border-radius: 1rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
+  background-color: white;
 }
 .cause-name {
   overflow-wrap: break-word;

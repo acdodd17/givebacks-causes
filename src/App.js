@@ -35,9 +35,16 @@ function App() {
         <div className='filter-search'>
 
         </div>
-        <div className='causes'>
-          {isLoaded === true && causes ? causes.map((cause, index) => <Cause cause={cause} key={index}/> ) : ''}
-        </div>
+        {isLoaded === true && causes ? 
+        <>
+        <div className='cause-count'>
+            <h3 className='count'>{causes.length} / 50 <em>causes</em></h3>
+          </div>
+          <div className='causes'>
+            {causes.map((cause, index) => <Cause cause={cause} key={index}/> )}
+          </div>
+        </>
+        : ''} 
       </main>
     </div>
   );
