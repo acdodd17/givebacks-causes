@@ -93,6 +93,7 @@ input {
   background-color: white;
 }
 .cause-name {
+  text-overflow: clip;
   overflow-wrap: break-word;
   background: linear-gradient(45deg, #ff7a59, #f07800, #f29811);
   height: 50px;
