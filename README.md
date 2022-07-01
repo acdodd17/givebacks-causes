@@ -17,7 +17,7 @@ Built with:
 - [Questions](#questions)
 
 ## Installation
-To see this code in action, clone this repository and get started by running `npm install` to be sure you have all necssary packages. Then, run `npm start` to test our each user story. 
+To see this code in action, clone this repository and get started by running `npm install` to be sure you have all necssary packages. Then, run `npm start` to test out each user story. 
 
 ## Challenges
 The greatest challenge I faced on this assessment was time. I spent too much of my time in planning and design and did not leave myself enough of the 4 hours to complete all of the search requirements. I tried to make sure that I had a vizually appealing and true to brand UI, which took up more of my time than I should have allowed in order to successfully fulfill all the outlined user stories. 
