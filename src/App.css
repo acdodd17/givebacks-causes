@@ -1,6 +1,7 @@
 
 .App {
   text-align: center;
+  display: block;
 }
 
 
@@ -9,7 +10,7 @@
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 3rem;
  
 }
 
@@ -17,12 +18,51 @@
   font-size: .85rem;
   font-style: italic;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.main {
+
+.filter-search {
+  background-color: #693d7f;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+#search-instructions {
+  color: white;
+  padding: .5rem 1rem;
+  font-size: .8rem;
   
 }
 
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-form label, .search-form button {
+  margin: .5rem;
+}
+
+input {
+  margin: 0 .5rem;
+  border-radius: .5rem;
+  border: none;
+  padding: .25rem;
+}
+
+.search-btn {
+  width: 60%;
+  max-width: 200px;
+  background-color: #f29811;
+  border-radius: 2rem;
+  border: none;
+}
 .causes {
   display: flex;
   justify-content: space-evenly;
@@ -30,12 +70,12 @@
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 80%;
   /* background-color: rgba(211,211,211,0.5); */
 }
 
 .cause-count {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .count em {
@@ -49,7 +89,7 @@
   height: 250px;
   border: 1px solid lightgrey;
   border-radius: 1rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   background-color: white;
 }
 .cause-name {
@@ -80,13 +120,4 @@
 .btn a {
   text-decoration: none;
   color: #78ffff;
-}
-
-.btn:hover {
-  background-color: #78ffff;
-  color: #693d7f;
-}
-
-.btn a:hover {
-  color: #693d7f;
 }

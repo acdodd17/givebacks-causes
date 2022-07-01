@@ -33,7 +33,15 @@ function App() {
       </header>
       <main>
         <div className='filter-search'>
-
+          <div className='search'>
+            <p id='search-instructions'>Filter causes below. Search by name, city, and/or state</p>
+            <form className='search-form'>
+              <label><input type='text' placeholder='Enter name of cause'></input></label>
+              <label><input type='text' placeholder='City'></input><input type='text' placeholder='State'></input></label>
+              <button className='search-btn' type='submit'>Search</button>
+            </form>
+          </div>
+          
         </div>
         {isLoaded === true && causes ? 
         <>
