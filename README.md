@@ -25,5 +25,5 @@ The greatest challenge I faced on this assessment was time. I spent too much of 
 ## Questions
 Contact me for any questions:
 - [GitHub](https://github.com/acdodd17 "Anna's Profile")
-- [Email](acdodd17@gmail.com "Anna's Email")
+- [LinkedIn](https://www.linkedin.com/in/anna-dodd-9bb3a63a/ "Anna's LinkedIn")
 
