@@ -10,8 +10,9 @@
 }
 
 .title {
-  font-size: 3rem;
- 
+  font-size: 4rem;
+  font-weight: 500;
+  color: #f07800
 }
 
 #tagline {
@@ -63,6 +64,10 @@ input {
   border-radius: 2rem;
   border: none;
 }
+.search-btn:hover {
+  background-color: #f07800
+}
+
 .causes {
   display: flex;
   justify-content: space-evenly;
@@ -121,4 +126,18 @@ input {
 .btn a {
   text-decoration: none;
   color: #78ffff;
+}
+
+.btn:hover {
+  background-color: #933dbe ;
+}
+
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 3rem;
+  }
+  #tagline {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
 }
