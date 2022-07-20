@@ -1,6 +1,11 @@
 import React from 'react';
+import {ICause} from '../../App';
 
-const Cause = ({cause}) => {
+interface IProps {
+    cause: ICause;
+}
+
+const SingleCause = ({cause}: IProps) => {
 
     return (
         <div className='cause'>
@@ -19,4 +24,4 @@ const Cause = ({cause}) => {
     );
 }
 
-export default Cause;
+export default SingleCause;
