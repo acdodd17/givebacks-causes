@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 
 import logo from "./assets/logo.png";
 import "./App.css";
@@ -19,7 +19,7 @@ export interface ICause {
 type Query = {
   name?: "";
   city?: "";
-  state?: "";
+  // state?: "";
 };
 
 const App = () => {
@@ -27,9 +27,6 @@ const App = () => {
   const [causes, setCauses] = useState<ICause[]>([]);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [query, setQuery] = useState<Query>({});
-  const [name, setName] = useState<boolean>(false);
-  const [city, setCity] = useState<boolean>(false);
-  const [state, setState] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,17 +44,18 @@ const App = () => {
 
     let inputs = document.querySelectorAll("input");
 
-   
     if (query.name) {
       setSearch(`search[name][value]=${query.name}`);
-    } else if (city && !name) {
+    } else if (query.city) {
       setSearch(`search[city][value]=${query?.city}`);
-    } else if (state && !name && !city) {
-      setSearch(`search[state][value]=${query?.state}`);
-    } else if (name && city) {
+    // } else if (query.state) {
+    //   setSearch(`search[state][value]=${query?.state}`);
+    // } 
+    }else if (query.name && query.city) {
       setSearch(
-        `join=AND&search[name][value]=${query?.name}&search[city][value]=${query?.city}&search[state][value]=${query?.state}`
+        `join=AND&search[name][value]=${query?.name}&search[city][value]=${query?.city}`
       );
+      console.log(search);
     } else {
       return;
     }
@@ -69,9 +67,15 @@ const App = () => {
     setQuery({
       name: "",
       city: "",
-      state: ""
+      // state: ""
     });
   }, [search])
+
+  // const renderCauses = useMemo(() => {
+  //   return causes.map((cause) => (
+  //     <SingleCause cause={cause} key={cause.uuid} />
+  //   ))
+  // }, [causes])
 
   return (
     <div className="App">
@@ -90,9 +94,6 @@ const App = () => {
               filterSearch={filterSearch}
               query={query}
               setQuery={setQuery}
-              setName={setName}
-              setCity={setCity}
-              setState={setState}
             />
           </div>
         </div>
